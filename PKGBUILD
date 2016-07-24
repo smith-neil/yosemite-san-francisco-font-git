@@ -3,7 +3,7 @@
 _pkgname=YosemiteSanFranciscoFont
 
 pkgname=YosemiteSanFranciscoFont-git
-pkgver=1.0.r0.g6bdbc49
+pkgver=1.0.r2.g5a6e8ca
 pkgrel=1
 pkgdesc="San Francisco font - the Apple Watch font"
 arch=('any')
@@ -22,9 +22,9 @@ pkgver() {
 }
 
 package() {
-    cd -la "$srcdir/$_pkgname"
-    cp 'System San Francisco Display Bold.ttf' /usr/share/fonts/TTF
-    cp 'System San Francisco Display Regular.ttf' /usr/share/fonts/TTF
-    cp 'System San Francisco Display Thin.ttf' /usr/share/fonts/TTF
-    cp 'System San Francisco Display Ultralight.ttf' /usr/share/fonts/TTF
+    cd "$srcdir/$_pkgname"
+    sudo cp 'System San Francisco Display Bold.ttf' /usr/share/fonts/TTF
+    sudo cp 'System San Francisco Display Regular.ttf' /usr/share/fonts/TTF
+    sudo cp 'System San Francisco Display Thin.ttf' /usr/share/fonts/TTF
+    sudo cp 'System San Francisco Display Ultralight.ttf' /usr/share/fonts/TTF
 }
